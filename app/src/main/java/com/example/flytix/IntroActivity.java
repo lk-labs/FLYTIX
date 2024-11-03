@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class IntroActivity extends AppCompatActivity {
 
-    Button btnStart;
+    Button btnStart, btnHave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,19 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         btnStart = findViewById(R.id.startBtn);
+        btnHave = findViewById(R.id.haveBtn);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(IntroActivity.this, MainActivity.class));
+            }
+        });
+
+        btnHave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(IntroActivity.this,LoginActivity.class));
             }
         });
 
